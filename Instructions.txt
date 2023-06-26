@@ -1,0 +1,33 @@
+npm install --global yarn
+yarn add expo
+npx create-expo-app MeuProjeto
+cd MeuProjeto
+npx expo install react-native-web@~0.18.10 react-dom@18.2.0 @expo/webpack-config@^18.0.1
+
+
+pra quem tem iphone: npx expo start
+
+pra quem conectou celular: expo start --localhost --android
+
+
+Figma:
+https://www.figma.com/file/TSscE5XaY0vDMe0XHItH2V/Untitled?type=design&node-id=0%3A1&mode=design&t=8jhWRz9cDLvKJHrD-1
+
+
+Repositorio:
+
+https://github.com/luaenrique/react-native-senai
+
+
+====
+
+pra quem clonou agora (lembrar de usar o cmd e nao o powershell)
+
+yarn
+yarn add expo
+npx expo install react-native-web@~0.18.19 react-dom@18.2.0 @expo/webpack-config@^18.0.1
+npx expo stanpx rt
+
+quem está com celular android + cabo: npx expo start --localhost --android
+quem está com iOS + mac: npx expo start + "i"
+quem está com windows e vai rodar na web: npx expo start + "w"
