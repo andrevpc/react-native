@@ -1,53 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
-import { Button, StyleSheet, Text, View, TextInput, Image, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
-import Logo from './assets/logo.png'
-import CustomInput from './components/CustomInput';
-import styles from './styles/styles';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import Login from './pages/Login'
+import Listagem from './pages/Listagem';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  
-  const [email, setEmail] = useState()
-  const [senha, setSenha] = useState()
- 
-  const setEmailInputValue = (value) => {
-    setEmail(value)
-  }
-
-  const setSenhaInputValue = (value) => {
-    setSenha(value)
-  }
 
   return (
-    <View style={styles.container}>
-      <Image
-        source={Logo}
-        style={{
-          width: 100,
-          height: 100
-        }}
-      />
-
-      <CustomInput
-        placeholder='E-mail'
-        value={email} 
-        funcao={setEmailInputValue}
-      />
-
-      <CustomInput
-        placeholder='Senha'
-        value={senha}
-        funcao={setSenhaInputValue}
-        isPassword={true}
-      />
-
-      <TouchableOpacity style={{ marginTop: 15 }}>
-        <View style={styles.button}>
-          <Text style={styles.buttonText}>Entrar</Text>
-        </View>
-      </TouchableOpacity>
-    </View>
-  );
+    <NavigationContainer>
+        <Stack.Navigator>
+            <Stack.Screen name='Login' component={Login} />
+            <Stack.Screen name='Listagem' component={Listagem} />
+        </Stack.Navigator>
+    </NavigationContainer>
+  )
 }
-
-

@@ -1,3 +1,4 @@
+Aula 1
 npm install --global yarn
 yarn add expo
 npx create-expo-app MeuProjeto
@@ -31,3 +32,14 @@ npx expo stanpx rt
 quem está com celular android + cabo: npx expo start --localhost --android
 quem está com iOS + mac: npx expo start + "i"
 quem está com windows e vai rodar na web: npx expo start + "w"
+
+
+Aula 2
+Instalando o firebase
+npx expo install firebase
+
+Instalando o react navigator
+npm install @react-navigation/native
+npx expo install react-native-screens react-native-safe-area-context
+npm install @react-navigation/stack
+npx expo install react-native-gesture-handler
