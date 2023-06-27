@@ -43,3 +43,14 @@ npm install @react-navigation/native
 npx expo install react-native-screens react-native-safe-area-context
 npm install @react-navigation/stack
 npx expo install react-native-gesture-handler
+
+Aula 3
+Criando o api-node
+npm init
+npm install express
+
+Para que o aplicativo atualize ao atualizar o código
+npm install -g nodemon
+
+Para fazer requisições http (POST GET)
+yarn add axios
