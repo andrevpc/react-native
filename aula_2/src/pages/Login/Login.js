@@ -4,11 +4,13 @@ import { TextInput } from 'react-native-gesture-handler';
 import { Button, View, Text, Pressable } from 'react-native-web';
 import styles from './styles';
 import { utilsContext } from '../../context';
+import { userContext } from '../../context';
 
 export default function Login(props) {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const {data, setData} = useContext(utilsContext);
+  const {users, setUsers} = useContext(userContext);
 
   function irUsuarios() {
     setData({...data, login: email})

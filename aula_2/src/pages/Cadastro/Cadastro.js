@@ -14,7 +14,10 @@ export default function Cadastro(props) {
   const {users, setUsers} = useContext(userContext)
 
   const onClick = () => {
-    
+    setUsers([...users, {
+      name, idade, sexo, email, senha
+    }])
+    props.navigation.navigate('Login')
   }
 
   return (
@@ -75,7 +78,7 @@ export default function Cadastro(props) {
         <Text>Cadastrar</Text>
       </Button>
       <div style={styles.centerDiv}>
-        <Pressable onPress={() => props.navigation.navigate('Login')}>
+        <Pressable onPress={() => onClick()}>
           <Text>Cancelar</Text>
         </Pressable>
       </div>
